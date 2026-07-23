@@ -1,0 +1,11 @@
+node_modules
+.vercel
+.env
+.env.local
+*.log
+.DS_Store
+
+# Capturas de pantalla: pueden traer llaves a la vista.
+*.png
+*.jpg
+*.jpeg

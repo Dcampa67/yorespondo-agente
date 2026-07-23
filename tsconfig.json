@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    // Los imports relativos llevan extensión .ts, no .js. Node 24 corre
+    // TypeScript nativo pero NO traduce './x.js' a './x.ts', y esbuild
+    // (el que compila en Vercel) resuelve .ts sin problema. Así el mismo
+    // código corre en `npm run probar` y en producción.
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  },
+  "include": ["api/**/*.ts", "src/**/*.ts", "scripts/**/*.ts"]
+}
